@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Booth</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav> 
+        <div class="navElements">
+            
+        <button class="btn" id="colBtn">Frame color</button> 
+          <div class="dropDown">
+                <div class="color">
+                    <button id="black" class="color-btn"></button>
+                </div>
+                 <div class="color">
+                    <button id="white" class="color-btn"></button>
+                </div>
+                <div class="color">
+                    <button id="pink" class="color-btn"></button>
+                </div>
+                <div class="color">
+                    <button id="brown" class="color-btn"></button>
+                </div>
+                <div class="color">
+                    <button id="blue" class="color-btn"></button>
+                </div>
+            </div>
+
+            <!-- Mode selection -->
+            <!-- <button class="btn" id="modeBtn">Solo</button> 
+          <div class="dropDown2">
+            <div class="mode">
+                <button id="solo" class="mode-btn">Solo</button>
+            </div>
+            <div class="color">
+                <button id="bts" class="mode-btn">BTS</button>
+            </div>
+          </div> -->
+
+          <!--Idol's images  -->
+          <button class="btn" id="propBtn">Idols</button>
+            <div class="dropDown1">
+                <p class="prop-para prop" id="solo">solo</p>
+                <img src="idolImages/jin 1.png" alt=""class="prop">
+                <img src="idolImages/jin2.png" alt="" class="prop">
+                <img src="idolImages/rm1.png" alt="" class="prop">
+                <img src="idolImages/rm2.png" alt="" class="prop">
+                <img src="idolImages/suga1.png" alt="" class="prop">
+                <img src="idolImages/suga3.png" alt="" class="prop">
+                <img src="idolImages/suga4.png" alt="" class="prop">
+                <img src="idolImages/suga5.png" alt="" class="prop">
+                <img src="idolImages/jhope1.png" alt="" class="prop">
+                <img src="idolImages/jhope2.png" alt="" class="prop">
+                <img src="idolImages/jhope3.png" alt="" class="prop">
+                <img src="idolImages/jhope4.png" alt="" class="prop">
+                <img src="idolImages/jm1.png" alt="" class="prop">
+                <img src="idolImages/jm2.png" alt="" class="prop">
+                <img src="idolImages/v1.png" alt="" class="prop">
+                <img src="idolImages/v2.png" alt="" class="prop">
+                <img src="idolImages/v3.png" alt="" class="prop">
+                <img src="idolImages/jk1.png" alt="" class="prop">
+                <img src="idolImages/jk2.png" alt="" class="prop">
+                <img src="idolImages/jk3.png" alt="" class="prop">
+
+
+
+
+
+
+                
+
+
+
+
+
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <!-- Canvas where camera is accessed -->
+        <div class="camera-cont">
+          <canvas id="canvas"></canvas>
+          <div class="overlay-container">
+            <img src="idolImages/suga1.png" id="overlay-image">
+          </div>
+        </div>
+        <!-- This is the button to capture the picture -->
+        <button id="capture-btn" class="btn">Capture</button>
+
+        <div class="capturedImgs hidden">
+         <!-- This where images will be appended -->
+        </div>
+
+        <!-- Save button -->
+         <button class="btn hidden" id="save-btn">Save</button>
+    </div>
+   
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</body>
+</html>

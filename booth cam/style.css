@@ -1,4 +1,4 @@
-*{
+**{
     margin: 0;
     padding: 0;
 }
@@ -214,7 +214,7 @@ nav{
 /* Overlay conatiner */
 .overlay-container{
    position: absolute;
-   top: 18%;
+   top: 25%;
    right: 1%;
    width: 500px;
    height: calc((width / 1.5));
@@ -227,4 +227,55 @@ nav{
     right:0;
     object-fit: cover;
     pointer-events: none;
+}
+
+@media (max-width: 600px) {
+
+    nav,
+    .container,
+    .camera-cont,
+    .overlay-container,
+    .capturedImgs {
+        display: none;
+    }
+
+    body::before {
+        content: "This feature is not available on small devices.";
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: rgb(194, 13, 134);
+        font-size: 18px;
+        text-align: center;
+        padding: 20px;
+        background-color: #C599B6;
+    }
+}
+@media (max-width: 768px) {
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navElements {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    #canvas {
+        margin-top: 30px;
+    }
+
+    .overlay-container {
+        right: 0;
+        left: 0;
+        margin: auto;
+    }
+
+    .capturedImgs {
+        grid-template-rows: repeat(2, 1fr);
+    }
 }
